@@ -18,9 +18,9 @@ module.exports = {
         const channelCounts = await client.shard.fetchClientValues("channels.cache.size");
         const channelCount = channelCounts.reduce((p, count) => p + count);
 
-        await client.channels.cache.get('868403000618676315').setName(`『📖』 Servers : ${formatter.format(guildsCount)}`)
-        await client.channels.cache.get('867651912839725057').setName(`『👤』 Users : ${formatter.format(usersCount)}`)
-        await client.channels.cache.get('868410537887813633').setName(`『💬』 Channels : ${formatter.format(channelCount)}`)
+        await client.channels.cache.get('id').setName(`『📖』 Servers : ${formatter.format(guildsCount)}`)
+        await client.channels.cache.get('id').setName(`『👤』 Users : ${formatter.format(usersCount)}`)
+        await client.channels.cache.get('id').setName(`『💬』 Channels : ${formatter.format(channelCount)}`)
         client.user.setActivity(`!help | ${guildsCount} Server`, { type: 'WATCHING' })
 
         if (!guild.members.cache.get(client.user.id).hasPermission('VIEW_AUDIT_LOG')) return;
