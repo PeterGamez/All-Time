@@ -1,4 +1,4 @@
-﻿const Discord = require('discord.js')
+const Discord = require('discord.js')
 const os = require('os');
 const formatter = new Intl.NumberFormat('en')
 const fs = require("fs");
@@ -27,7 +27,7 @@ module.exports = {
             ];
         });
 
-        let count = JSON.parse(fs.readFileSync(`../db/music.json`, "utf8"));
+        let count = JSON.parse(fs.readFileSync(`./db/music.json`, "utf8"));
 
         const embed = new Discord.MessageEmbed()
             .setColor(client.config.color)
@@ -43,8 +43,8 @@ module.exports = {
             .addField(':file_folder: ช่องแชททั้งหมด', `\`${formatter.format(client.channels.cache.filter((ch) => ch.type === "text").size)} ห้อง\``, true)
             .addField(':file_folder: ช่องเสียงทั้งหมด', `\`${formatter.format(client.channels.cache.filter((ch) => ch.type === "voice").size)} ห้อง\``, true)
             .addField(':computer: เปิดเพลง', `\`${count.players.count} เซิร์ฟเวอร์\``, true)
-            .addField(':computer: ซีพียู', `\`\`\`Intel(R) Xeon(R) CPU X5690 @ 3.46GHz (2 processors)\`\`\``, false)
-            .addField(':computer: ระบบปฏิบัติการ', `\`Windows Server 2019\nDatacenter Evaluation\``, true)
+            .addField(':computer: ซีพียู', `\`\`\`CPU\`\`\``, false)
+            .addField(':computer: ระบบปฏิบัติการ', `\`OS\``, true)
             .addField(':computer: ระบบบอท', `\`Discord Js: ${Discord.version}\nNode Js: ${process.version}\``, true)
             .addField(':computer: แรมที่ใช้ไป', `\`${((os.totalmem() - os.freemem()) / Math.pow(1024, 3)).toFixed(2)}/${(os.totalmem() / Math.pow(1024, 3)).toFixed(2)} GB\``, true)
 
