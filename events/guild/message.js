@@ -1,7 +1,7 @@
 const Discord = require("discord.js")
-const permissionslist = require('../../../db/permissions.json');
-const quickdb = require("../../../quick.db/index.js");
-const prefix = quickdb("../db/prefix.sqlite");
+const permissionslist = require('../../db/permissions.json');
+const quickdb = require("../../quick.db/index.js");
+const prefix = quickdb("./db/prefix.sqlite");
 
 module.exports = {
     config: {
