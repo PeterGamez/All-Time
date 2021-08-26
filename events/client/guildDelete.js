@@ -8,7 +8,7 @@ module.exports = {
         name: 'guildDelete'
     },
     run: async (guild, client) => {
-        const webhook = require('../../webhook.json')
+        const webhook = require('../../db/webhook.json')
         const hook = new Discord.WebhookClient(webhook['id'].joinleave.id, webhook['id'].joinleave.token);
         await hook.send(`ออก \`${guild.name}\`, ${guild.id}
 เจ้าของกิล ${guild.owner.user.username}, สมาชิกในกิล ${formatter.format(guild.memberCount - guild.members.cache.filter(member => member.user.bot).size)} คน ${formatter.format(guild.members.cache.filter(member => member.user.bot).size)} บอท`).catch((e) => { return console.log(e) })
