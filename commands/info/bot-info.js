@@ -27,8 +27,6 @@ module.exports = {
             ];
         });
 
-        let count = JSON.parse(fs.readFileSync(`./db/music.json`, "utf8"));
-
         const embed = new Discord.MessageEmbed()
             .setColor(client.config.color)
             .setAuthor(`ข้อมูลของบอท ${client.user.username}`, message.guild.iconURL())
@@ -42,7 +40,6 @@ module.exports = {
             .addField(':file_folder: สมาชิกทั้งหมด', `\`${formatter.format(usersCount)} คน\``, true)
             .addField(':file_folder: ช่องแชททั้งหมด', `\`${formatter.format(client.channels.cache.filter((ch) => ch.type === "text").size)} ห้อง\``, true)
             .addField(':file_folder: ช่องเสียงทั้งหมด', `\`${formatter.format(client.channels.cache.filter((ch) => ch.type === "voice").size)} ห้อง\``, true)
-            .addField(':computer: เปิดเพลง', `\`${count.players.count} เซิร์ฟเวอร์\``, true)
             .addField(':computer: ซีพียู', `\`\`\`CPU\`\`\``, false)
             .addField(':computer: ระบบปฏิบัติการ', `\`OS\``, true)
             .addField(':computer: ระบบบอท', `\`Discord Js: ${Discord.version}\nNode Js: ${process.version}\``, true)
