@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
-const quickdb = require("../../../quick.db/index.js");
-const db = quickdb("../db/prefix.sqlite");
+const quickdb = require("../../quick.db/index.js");
+const db = quickdb("./db/prefix.sqlite");
 
 module.exports = {
     config: {
