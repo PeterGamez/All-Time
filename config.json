@@ -1,0 +1,16 @@
+{
+    "token": "token_here"
+    "prefix": "!",
+    "color": "F5CD38",
+    "version": "2.4",
+    "ownerid": [
+        "id"
+    ],
+    "modid": [
+        "id",
+        "689116845625835544",
+    ],
+    "invite_bot": "https://allzone.online/invite",
+    "support": "https://allzone.online/support",
+    "site": "https://docs.allzone.online",
+}
