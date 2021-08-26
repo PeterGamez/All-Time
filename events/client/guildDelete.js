@@ -21,9 +21,9 @@ module.exports = {
             client.shard.fetchClientValues("channels.cache.size")
         ];
         Promise.all(results).then(async shard => {
-            await client.channels.cache.get('868403000618676315').setName(`『📖』 Servers : ${formatter.format(shard[0])}`)
-            await client.channels.cache.get('867651912839725057').setName(`『👤』 Users : ${formatter.format(shard[1])}`)
-            await client.channels.cache.get('868410537887813633').setName(`『💬』 Channels : ${formatter.format(shard[2])}`)
+            await client.channels.cache.get('id').setName(`『📖』 Servers : ${formatter.format(shard[0])}`)
+            await client.channels.cache.get('id').setName(`『👤』 Users : ${formatter.format(shard[1])}`)
+            await client.channels.cache.get('id').setName(`『💬』 Channels : ${formatter.format(shard[2])}`)
             client.user.setActivity(`!help | ${shard[0]} Server`, { type: 'WATCHING' })
         })
     },
