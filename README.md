@@ -1,6 +1,6 @@
 <h1>All-Time</h1>
 <alltime bot<br>
-Document https://allzone.online
+Document https://allzoneth.com
 
 วิธีใช้งาน
 1. ดาวโหลดไฟล์จาก <a href="https://github.com/PeterGamez/All-Time/archive/refs/heads/main.zip" target="_blank">All Time</a>
