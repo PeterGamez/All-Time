@@ -1,5 +1,5 @@
 <h1>All-Time</h1>
-<alltime bot<br>
+<br>alltime bot<br>
 Document https://allzoneth.com
 
 วิธีใช้งาน
